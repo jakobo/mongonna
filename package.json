@@ -7,10 +7,10 @@
   "scripts": {
     "build": "tsup",
     "example": "ts-node-esm ./example.ts",
+    "rel": "release-it",
     "syncpack": "syncpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ts-node": "ts-node-esm",
-    "rel": "release-it"
+    "ts-node": "ts-node-esm"
   },
   "tsup": {
     "entry": {

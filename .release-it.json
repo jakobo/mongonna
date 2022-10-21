@@ -10,7 +10,7 @@
     "before:init": [
       "syncpack list-mismatches",
       "syncpack format",
-      "pnpm run buils"
+      "pnpm run build"
     ]
   }
 }
