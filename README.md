@@ -6,7 +6,7 @@ _naming things is hard_
 
 # Why
 
-Atlas App Service leaves a lot to be desired. If you're using Mongo, you just kind of wanted to use Mongo the way it was intended!
+Atlas App Service leaves a lot to be desired. If you're using Mongo, you just kind of wanted to use Mongo the way it was intended! Mongonna looks like & acts like a regular node.js MongoDB client with a catch- the first parameter is a proxy server that will receive your Mongo command and execute it.
 
 # How
 
@@ -43,3 +43,7 @@ You can then call `applyMongonna` wih your client & chain object, and we reflect
 const { data, error } = await applyMongonna(client, chain);
 sendJson(200, { data, error }); // status code 200. The call worked, errors will be rethrown locally
 ```
+
+# Caveats
+
+Cursors are awkward, because in a stateless world. `next()` would always resolve the same. There's no easy fix for that, but if you're using `toArray()` and smart queries, it can be worked around.
