@@ -1,7 +1,7 @@
 {
   "name": "mongonna",
   "description": "When You're Gonna use HTTPS for MongoDB",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "",
   "license": "MIT",
   "scripts": {
