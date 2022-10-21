@@ -96,7 +96,7 @@ export const MongonnaClient = function <T extends object>(
   ): T;
 };
 
-export const applyMongnna = async (
+export const applyMongonna = async (
   client: MongoClient,
   chain: MongonnaStack
 ): Promise<{ data?: unknown; error?: unknown }> => {

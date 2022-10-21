@@ -1,7 +1,11 @@
 import serve, { json, run, send } from "micro";
 import http from "node:http";
 import { MongoClient } from "mongodb";
-import { type MongonnaRequest, applyMongnna, MongonnaClient } from "./index.js";
+import {
+  type MongonnaRequest,
+  applyMongonna,
+  MongonnaClient,
+} from "./index.js";
 
 type Listener = http.RequestListener<
   typeof http.IncomingMessage,
@@ -17,7 +21,7 @@ const server = micro(async (req, res) => {
   console.log("Mongonna got!", j.url, j.mongoUrl, j.options, j.chain);
 
   // maybe cache your mongo clients by mongoUrl
-  const { data, error } = await applyMongnna(
+  const { data, error } = await applyMongonna(
     new MongoClient("mongodb://127.0.0.1:27017/?directConnection=true"),
     j.chain
   );
